@@ -229,6 +229,7 @@ exec --no-startup-id parcellite
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id discord --start-minimized
 exec --no-startup-id kdeconnect-indicator
+exec --no-startup-id blueman-applet
 
 # Custom keybindings for launching applications, tasks, etc
 
