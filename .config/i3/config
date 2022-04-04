@@ -247,3 +247,7 @@ bindsym $mod+Print exec --no-startup-id flameshot screen -p /home/joel/Pictures
 
 # toggle i3bar
 bindsym $mod+b bar mode toggle
+
+# monitor configuration - display browser and code editor in bigger, secondary monitor
+workspace $ws2 output HDMI-A-0
+workspace $ws4 output HDMI-A-0
