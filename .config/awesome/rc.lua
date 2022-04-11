@@ -316,7 +316,13 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+
+    -- custom keybindings
+    awful.key({ modkey, }, "v", function() awful.util.spawn("copyq toggle") end,
+    {description = "clipboard toggle", group = "custom"}),
+    awful.key({ modkey, "Shift"}, "w", function() awful.util.spawn("firefox") end,
+    {description = "browser", group = "custom"})
 )
 
 clientkeys = gears.table.join(

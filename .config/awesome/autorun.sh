@@ -12,7 +12,7 @@ run cbatticon &
 run flameshot &
 run nitrogen --restore &
 run picom --experimental-backends &
-run parcellite &
+run copyq &
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 run discord --start-minimized &
 run kdeconnect-indicator &
