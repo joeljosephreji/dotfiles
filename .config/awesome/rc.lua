@@ -271,9 +271,6 @@ globalkeys = gears.table.join(
 	end, { description = "go back", group = "client" }),
 
 	-- Standard program
-	awful.key({ modkey }, "Return", function()
-		awful.spawn(terminal)
-	end, { description = "open a terminal", group = "launcher" }),
 	awful.key({ modkey, "Control" }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
 	awful.key({ modkey, "Shift" }, "q", function()
 		awful.prompt.run({
@@ -328,15 +325,7 @@ globalkeys = gears.table.join(
 	-- Menubar
 	awful.key({ modkey }, "p", function()
 		menubar.show()
-	end, { description = "show the menubar", group = "launcher" }),
-
-	-- custom keybindings
-	awful.key({ modkey }, "v", function()
-		awful.util.spawn("copyq toggle")
-	end, { description = "clipboard toggle", group = "custom" }),
-	awful.key({ modkey, "Shift" }, "w", function()
-		awful.util.spawn("firefox")
-	end, { description = "browser", group = "custom" })
+	end, { description = "show the menubar", group = "launcher" })
 )
 
 clientkeys = gears.table.join(

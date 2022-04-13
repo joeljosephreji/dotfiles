@@ -30,21 +30,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# Adjust brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
-
-# Keyboard backlight
-bindsym XF86KbdBrightnessUp exec --no-startup-id brightnessctl --device='asus::kbd_backlight' set +25%
-bindsym XF86KbdBrightnessDown exec --no-startup-id brightnessctl --device='asus::kbd_backlight' set 25%-
-
 # Disable titlebars
 default_border pixel 1
 default_floating_border pixel 1
@@ -57,9 +42,6 @@ smart_gaps on
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-
-# start a terminal
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -226,25 +208,14 @@ bar {
 exec --no-startup-id flameshot
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom --experimental-backends
-exec --no-startup-id parcellite
+exec --no-startup-id copyq
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id discord --start-minimized
 exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id blueman-applet
+exec --no-startup-id sxhkd
 
 # Custom keybindings for launching applications, tasks, etc
-
-# Web browser
-bindsym $mod+Shift+w exec --no-startup-id firefox
-
-# File manager
-bindsym $mod+Shift+Return exec --no-startup-id pcmanfm
-
-# Screen shot
-bindsym $mod+Shift+s exec --no-startup-id flameshot gui
-bindsym Print exec --no-startup-id flameshot screen -c
-bindsym $mod+Print exec --no-startup-id flameshot screen -p /home/joel/Pictures
-
 # toggle i3bar
 bindsym $mod+b bar mode toggle
 

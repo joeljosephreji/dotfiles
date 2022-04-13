@@ -7,6 +7,7 @@ function run {
   fi
 }
 
+run sxhkd &
 run nm-applet &
 run cbatticon &
 run flameshot &

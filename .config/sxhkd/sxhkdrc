@@ -1,0 +1,42 @@
+# Clipboard Manager
+super + v
+  copyq toggle
+
+# Browser
+super + shift + w
+  firefox
+
+# Terminal
+super + Return
+  $TERMINAL
+
+# Screenshot application
+{_,super} + Print
+  flameshot screen {-c,-p $HOME/Pictures}
+
+super + shift + s
+  flameshot gui
+
+# File Manager
+super + shift + Return
+  pcmanfm
+
+# Adjust brightness
+XF86MonBrightness{Up,Down}
+  xbacklight {-inc,-dec} 5
+
+# Keyboard backlight
+XF86KbdBrightness{Up,Down}
+  brightnessctl --device='asus::kbd_backlight' set {+25%,25%-}
+
+
+# Audio controls
+XF86Audio{Raise,Lower}Volume
+  amixer set Master {5%+,5%-}
+
+XF86AudioMute
+  amixer set Master toggle
+
+XF86AudioMicMute
+  amixer set Capture toggle
+
