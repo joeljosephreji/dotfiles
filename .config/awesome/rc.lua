@@ -246,16 +246,20 @@ globalkeys = gears.table.join(
 		awful.client.focus.bydirection("right")
 	end, { description = "focus to window on right", group = "client" }),
 
-	-- awful.key({ modkey,           }, "w", function () custom function end,
-	-- {description = "show main menu", group = "awesome"}),
-
 	-- Layout manipulation
+	awful.key({ modkey, "Shift" }, "h", function()
+		awful.client.swap.bydirection("left")
+	end, { description = "swap with client on left", group = "client" }),
 	awful.key({ modkey, "Shift" }, "j", function()
-		awful.client.swap.byidx(1)
-	end, { description = "swap with next client by index", group = "client" }),
+		awful.client.swap.bydirection("down")
+	end, { description = "swap with client below", group = "client" }),
 	awful.key({ modkey, "Shift" }, "k", function()
-		awful.client.swap.byidx(-1)
-	end, { description = "swap with previous client by index", group = "client" }),
+		awful.client.swap.bydirection("up")
+	end, { description = "swap with client above", group = "client" }),
+	awful.key({ modkey, "Shift" }, "l", function()
+		awful.client.swap.bydirection("right")
+	end, { description = "swap with client on right", group = "client" }),
+
 	awful.key({ modkey, "Control" }, "j", function()
 		awful.screen.focus_relative(1)
 	end, { description = "focus the next screen", group = "screen" }),
@@ -296,10 +300,12 @@ globalkeys = gears.table.join(
 	-- {description = "increase the number of columns", group = "layout"}),
 	-- awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
 	-- {description = "decrease the number of columns", group = "layout"}),
-	-- awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
-	-- {description = "select next", group = "layout"}),
-	-- awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
-	-- {description = "select previous", group = "layout"}),
+	awful.key({ modkey }, "space", function()
+		awful.layout.inc(1)
+	end, { description = "select next", group = "layout" }),
+	awful.key({ modkey, "Shift" }, "space", function()
+		awful.layout.inc(-1)
+	end, { description = "select previous", group = "layout" }),
 
 	awful.key({ modkey, "Control" }, "n", function()
 		local c = awful.client.restore()
@@ -522,9 +528,11 @@ end)
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 
 -- Run garbage collector regularly to prevent memory leaks
-gears.timer {
-       timeout = 30,
-       autostart = true,
-       callback = function() collectgarbage() end
-}
+gears.timer({
+	timeout = 30,
+	autostart = true,
+	callback = function()
+		collectgarbage()
+	end,
+})
 -- }}}
