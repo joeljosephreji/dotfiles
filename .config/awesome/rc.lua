@@ -268,7 +268,16 @@ globalkeys = gears.table.join(
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
+    awful.key({ modkey, "Shift"   }, "q",
+      function () awful.prompt.run {
+                    prompt       = "Do you want to quit (y/n): ",
+                    textbox      = awful.screen.focused().mypromptbox.widget,
+                    exe_callback = function (input)
+                      if ( input == "y" ) then
+                        awesome.quit()
+                      end
+                    end
+              } end,
               {description = "quit awesome", group = "awesome"}),
 
     -- awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
