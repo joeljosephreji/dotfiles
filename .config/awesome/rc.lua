@@ -67,6 +67,7 @@ editor_cmd = terminal .. " -e " .. editor
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
+altmodkey = "Mod1"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -260,12 +261,12 @@ globalkeys = gears.table.join(
 		awful.client.swap.bydirection("right")
 	end, { description = "swap with client on right", group = "client" }),
 
-	awful.key({ modkey, "Control" }, "j", function()
-		awful.screen.focus_relative(1)
-	end, { description = "focus the next screen", group = "screen" }),
-	awful.key({ modkey, "Control" }, "k", function()
-		awful.screen.focus_relative(-1)
-	end, { description = "focus the previous screen", group = "screen" }),
+	awful.key({ modkey, "Control" }, "h", function()
+		awful.screen.focus_bydirection("left")
+	end, { description = "focus the screen on left", group = "screen" }),
+	awful.key({ modkey, "Control" }, "l", function()
+		awful.screen.focus_bydirection("right")
+	end, { description = "focus the screen on right", group = "screen" }),
 	awful.key({ modkey }, "u", awful.client.urgent.jumpto, { description = "jump to urgent client", group = "client" }),
 	awful.key({ modkey }, "Tab", function()
 		awful.client.focus.history.previous()
@@ -288,18 +289,24 @@ globalkeys = gears.table.join(
 		})
 	end, { description = "quit awesome", group = "awesome" }),
 
-	-- awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
-	-- {description = "increase master width factor", group = "layout"}),
-	-- awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
-	-- {description = "decrease master width factor", group = "layout"}),
-	-- awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
-	-- {description = "increase the number of master clients", group = "layout"}),
-	-- awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
-	-- {description = "decrease the number of master clients", group = "layout"}),
-	-- awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
-	-- {description = "increase the number of columns", group = "layout"}),
-	-- awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
-	-- {description = "decrease the number of columns", group = "layout"}),
+	awful.key({ altmodkey }, "l", function()
+		awful.tag.incmwfact(0.05)
+	end, { description = "increase master width factor", group = "layout" }),
+	awful.key({ altmodkey }, "h", function()
+		awful.tag.incmwfact(-0.05)
+	end, { description = "decrease master width factor", group = "layout" }),
+	awful.key({ altmodkey, "Shift" }, "h", function()
+		awful.tag.incnmaster(1, nil, true)
+	end, { description = "increase the number of master clients", group = "layout" }),
+	awful.key({ altmodkey, "Shift" }, "l", function()
+		awful.tag.incnmaster(-1, nil, true)
+	end, { description = "decrease the number of master clients", group = "layout" }),
+	awful.key({ altmodkey, "Control" }, "h", function()
+		awful.tag.incncol(1, nil, true)
+	end, { description = "increase the number of columns", group = "layout" }),
+	awful.key({ altmodkey, "Control" }, "l", function()
+		awful.tag.incncol(-1, nil, true)
+	end, { description = "decrease the number of columns", group = "layout" }),
 	awful.key({ modkey }, "space", function()
 		awful.layout.inc(1)
 	end, { description = "select next", group = "layout" }),
