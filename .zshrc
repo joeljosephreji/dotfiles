@@ -22,7 +22,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 autoload -Uz add-zsh-hook vcs_info
 setopt prompt_subst
 add-zsh-hook precmd vcs_info
-PROMPT='%F{yellow}%*%f %F{cyan}%n%f in %F{blue}%~%f %F{magenta}${vcs_info_msg_0_}%f %# '
+PROMPT='%F{yellow}%*%f %B%F{cyan}%n%f%b in %B%F{blue}%~%f%b %F{magenta}${vcs_info_msg_0_}%f %# '
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr ' *'
