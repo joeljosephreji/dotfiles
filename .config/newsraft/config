@@ -1,0 +1,10 @@
+# Command binding for opening links with feh image viewer.
+bind f exec feh "%l"
+
+# This will launch mpv in the background.
+bind m exec mpv --no-terminal "%l" &
+# This will launch mpv interactively.
+bind M exec mpv "%l"
+
+# Opening with commandline browser
+bind O exec w3m "%l"

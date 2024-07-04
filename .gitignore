@@ -1,0 +1,4 @@
+__pycache__/
+.config/btop/btop.log
+.config/kitty/kitty.conf.bak
+
