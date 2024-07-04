@@ -30,4 +30,15 @@ zstyle ':vcs_info:*' stagedstr ' +'
 zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
+# fzf color scheme
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+# zsh syntax highlighting
+source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+# zoxide
+eval "$(zoxide init zsh)"
 
