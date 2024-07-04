@@ -1,45 +1,41 @@
-#!/bin/env bash
+#!/bin/env sh
 
-# Options for powermenu
 lock=" Lock"
+suspend="⏾ Suspend"
 logout="󰗽 Logout"
 shutdown="⏻ Shutdown"
 reboot=" Reboot"
-sleep="⏾ Sleep"
 
-# Get answer from user via rofi
-selected_option=$(echo "$lock
+selected=$(echo "$lock
+$suspend
 $logout
-$sleep
-$reboot
-$shutdown" | rofi -dmenu\
-                  -i\
-                  -p "Power"\
-                  -config "~/.config/rofi/powermenu.rasi"\
-                  -font "Symbols Nerd Font 12"\
-                  -width "15"\
-                  -lines 5\
-                  -line-margin 3\
-                  -line-padding 10\
-                  -scrollbar-width "0" )
+$shutdown
+$reboot" | rofi -dmenu -i -p "Power Menu")
 
-# Do something based on selected option
-if [ "$selected_option" == "$lock" ]
-then
-    /home/$USER/.config/bspwm/scripts/i3lock-fancy/i3lock-fancy.sh
-elif [ "$selected_option" == "$logout" ]
-then
-    bspc quit
-elif [ "$selected_option" == "$shutdown" ]
-then
-    systemctl poweroff
-elif [ "$selected_option" == "$reboot" ]
-then
-    systemctl reboot
-elif [ "$selected_option" == "$sleep" ]
-then
-    amixer set Master mute
-    systemctl suspend
-else
-    echo "No match"
-fi
+case $selected in
+    "$lock")
+        notify-send "Locking!"
+        hyprlock
+        ;;
+    "$suspend")
+        notify-send "Suspending!"
+        amixer set Master mute
+        systemctl suspend
+        ;;
+    "$logout")
+        notify-send "Logging out!"
+        hyprctl dispatch exit
+        ;;
+    "$reboot")
+        notify-send "Rebooting!"
+        systemctl reboot
+        ;;
+    "$shutdown")
+        notify-send "Shutting down!"
+        systemctl poweroff
+        ;;
+    *)
+        notify-send "Invalid Option!"
+        ;;
+esac
+
