@@ -18,6 +18,23 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
+# History
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+# show only history which begins with the same string
+bindkey -M vicmd 'k' history-search-backward
+bindkey -M vicmd 'j' history-search-forward
+
 # Git prompt
 autoload -Uz add-zsh-hook vcs_info
 setopt prompt_subst
@@ -41,4 +58,13 @@ source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# ls to have colour by default
+alias ls="ls --color"
+
+# Completion styling
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+# fzf integration
+source <(fzf --zsh)
 
