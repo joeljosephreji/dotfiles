@@ -68,3 +68,6 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # fzf integration
 source <(fzf --zsh)
 
+# oh my posh integration
+eval "$(oh-my-posh init zsh)"
+
