@@ -35,17 +35,17 @@ setopt hist_find_no_dups
 bindkey -M vicmd 'k' history-search-backward
 bindkey -M vicmd 'j' history-search-forward
 
-# Git prompt
-autoload -Uz add-zsh-hook vcs_info
-setopt prompt_subst
-add-zsh-hook precmd vcs_info
-PROMPT='%F{yellow}%*%f %B%F{cyan}%n%f%b in %B%F{blue}%~%f%b %F{magenta}${vcs_info_msg_0_}%f %# '
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr ' *'
-zstyle ':vcs_info:*' stagedstr ' +'
-zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
-zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
+# # Git prompt - not used anymore because of oh my posh
+# autoload -Uz add-zsh-hook vcs_info
+# setopt prompt_subst
+# add-zsh-hook precmd vcs_info
+# PROMPT='%F{yellow}%*%f %B%F{cyan}%n%f%b in %B%F{blue}%~%f%b %F{magenta}${vcs_info_msg_0_}%f %# '
+# zstyle ':vcs_info:*' enable git
+# zstyle ':vcs_info:*' check-for-changes true
+# zstyle ':vcs_info:*' unstagedstr ' *'
+# zstyle ':vcs_info:*' stagedstr ' +'
+# zstyle ':vcs_info:git:*' formats       '(%b%u%c)'
+# zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
 # fzf color scheme
 export FZF_DEFAULT_OPTS=" \
@@ -69,5 +69,5 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 source <(fzf --zsh)
 
 # oh my posh integration
-eval "$(oh-my-posh init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.toml)"
 
