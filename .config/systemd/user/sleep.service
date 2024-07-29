@@ -1,0 +1,11 @@
+[Unit]
+Description=User suspend actions - Lock screen
+Before=sleep.target
+
+[Service]
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/hyprlock
+
+[Install]
+WantedBy=sleep.target

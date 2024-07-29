@@ -10,10 +10,16 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   newline = true
 
   [[blocks.segments]]
-    type = 'session'
+    type = 'time'
     style = 'plain'
     foreground = 'p:teal'
-    template = '{{ .UserName }}'
+    template = "{{ .CurrentDate | date .Format }}"
+
+  # [[blocks.segments]]
+  #   type = 'session'
+  #   style = 'plain'
+  #   foreground = 'p:teal'
+  #   template = '{{ .UserName }}'
 
   [[blocks.segments]]
     type = 'text'
@@ -59,9 +65,11 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   overflow = 'hidden'
 
   [[blocks.segments]]
-    type = 'time'
+    type = 'executiontime'
     style = 'plain'
-    foreground = 'p:pink'
+    foreground = 'yellow'
+    background = 'transparent'
+    template = '{{ .FormattedMs }}'
 
 [[blocks]]
   type = 'prompt'
