@@ -14,28 +14,28 @@ $reboot" | rofi -dmenu -i -p "Power Menu")
 
 case $selected in
     "$lock")
-        notify-send "Locking!"
+        # notify-send "Locking!"
         hyprlock
         ;;
     "$suspend")
-        notify-send "Suspending!"
+        # notify-send "Suspending!"
         amixer set Master mute
         systemctl suspend
         ;;
     "$logout")
-        notify-send "Logging out!"
+        # notify-send "Logging out!"
         hyprctl dispatch exit
         ;;
     "$reboot")
-        notify-send "Rebooting!"
+        # notify-send "Rebooting!"
         systemctl reboot
         ;;
     "$shutdown")
-        notify-send "Shutting down!"
+        # notify-send "Shutting down!"
         systemctl poweroff
         ;;
     *)
-        notify-send "Invalid Option!"
+        # notify-send "Invalid Option!"
         ;;
 esac
 
