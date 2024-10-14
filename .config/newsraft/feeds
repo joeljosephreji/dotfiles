@@ -1,4 +1,4 @@
-@Global [60]
+@Global < reload-period 60
 
 @Books
 https://standardebooks.org/rss/new-releases "Standard Ebooks"
