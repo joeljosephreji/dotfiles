@@ -111,15 +111,15 @@
     "group/major-info-bar": {
         "orientation": "inherit",
         "modules": [
-            "custom/dunst", // First element is the "group leader" and won't ever be hidden
+            "privacy", // First element is the "group leader" and won't ever be hidden
+            "custom/dunst",
             "idle_inhibitor",
             "pulseaudio",
             "power-profiles-daemon",
             "group/major-stats",
             "backlight",
-            "battery",
+            "battery"
             // "battery#bat2",  // TODO might need a battery for peripherals
-            "privacy"
         ]
     },
     "custom/dunst": {
