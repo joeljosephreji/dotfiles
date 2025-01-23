@@ -22,6 +22,10 @@
     pkgs.oh-my-posh
     pkgs.eza
     pkgs.zoxide
+    pkgs.fzf
+
+    # command line applications
+    pkgs.yazi
 
     # application software
     pkgs.spotube
