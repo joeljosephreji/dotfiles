@@ -31,9 +31,9 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# show only history which begins with the same string
-bindkey -M vicmd 'k' history-search-backward
-bindkey -M vicmd 'j' history-search-forward
+# find better keybindings because this wouldn't work with multiline: show only history which begins with the same string
+# bindkey -M vicmd 'k' history-search-backward
+# bindkey -M vicmd 'j' history-search-forward
 
 # # Git prompt - not used anymore because of oh my posh
 # autoload -Uz add-zsh-hook vcs_info
