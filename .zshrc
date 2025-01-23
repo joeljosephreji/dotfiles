@@ -59,8 +59,12 @@ source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 # zoxide
 eval "$(zoxide init zsh)"
 
-# ls to have colour by default
-alias ls="ls --color"
+# ls to have colour by default and grouped by directories first
+if command -v eza &> /dev/null; then    # if eza is available, use it instead
+    alias ls="eza --group-directories-first"
+else
+    alias ls="ls --color --group-directories-first" # otherwise use ls color
+fi
 
 # Completion styling
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
