@@ -23,9 +23,15 @@
     pkgs.eza
     pkgs.zoxide
     pkgs.fzf
+    pkgs.jq
+    pkgs.fd
+    pkgs.ripgrep
 
     # command line applications
     pkgs.yazi
+
+    # fonts
+    pkgs.nerd-fonts.fira-code
 
     # application software
     pkgs.spotube
