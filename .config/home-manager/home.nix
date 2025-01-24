@@ -33,18 +33,28 @@
 
     # fonts
     pkgs.nerd-fonts.fira-code
+    pkgs.nerd-fonts.fira-mono
+    pkgs.fira-sans
+    # pkgs.fira-go # apparently building the fonts and not working
+    # pkgs.fira-math # apparently building the fonts and not working
 
     # programming software
     pkgs.neovim
     pkgs.minizinc
     pkgs.minizincide # check if a desktop file is also provided
 
-    # application software
+    # application software and utils
     pkgs.vimiv-qt
     pkgs.keepassxc
-    pkgs.signal-desktop
-    pkgs.discord
+    pkgs.flowtime
     pkgs.zotero
+    pkgs.gammastep
+    pkgs.lxqt.pcmanfm-qt
+
+    # messengers
+    pkgs.signal-desktop
+    pkgs.element-desktop
+    pkgs.discord
     pkgs.slack
 
     # music
