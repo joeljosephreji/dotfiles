@@ -50,6 +50,9 @@
     pkgs.zotero
     pkgs.gammastep
     pkgs.lxqt.pcmanfm-qt
+    pkgs.protonvpn-gui
+    # pkgs.gsmartcontrol # facing some issues with polkit agent, need to fix
+    # pkgs.gparted # facing some issues with polkit agent, need to fix
 
     # messengers
     pkgs.signal-desktop
