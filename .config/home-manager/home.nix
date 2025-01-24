@@ -37,15 +37,19 @@
     # programming software
     pkgs.neovim
     pkgs.minizinc
-    pkgs.minizincide
+    pkgs.minizincide # check if a desktop file is also provided
 
     # application software
+    pkgs.vimiv-qt
     pkgs.keepassxc
     pkgs.signal-desktop
     pkgs.discord
     pkgs.zotero
     pkgs.slack
+
+    # music
     pkgs.spotube
+    # pkgs.kdePackages.audiotube # not working
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
