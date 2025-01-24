@@ -29,11 +29,17 @@
 
     # command line applications
     pkgs.yazi
+    pkgs.btop
 
     # fonts
     pkgs.nerd-fonts.fira-code
 
     # application software
+    pkgs.keepassxc
+    pkgs.signal-desktop
+    pkgs.discord
+    pkgs.zotero
+    pkgs.slack
     pkgs.spotube
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
