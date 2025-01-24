@@ -34,6 +34,11 @@
     # fonts
     pkgs.nerd-fonts.fira-code
 
+    # programming software
+    pkgs.neovim
+    pkgs.minizinc
+    pkgs.minizincide
+
     # application software
     pkgs.keepassxc
     pkgs.signal-desktop
