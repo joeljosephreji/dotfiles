@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 
+# TODO figure out how to theme gtk and qt applications - use catpuccin (refer to repo if needed)
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -51,8 +52,10 @@
     pkgs.gammastep
     pkgs.lxqt.pcmanfm-qt
     pkgs.protonvpn-gui
+    pkgs.copyq
     # pkgs.gsmartcontrol # facing some issues with polkit agent, need to fix
     # pkgs.gparted # facing some issues with polkit agent, need to fix
+    # TODO might need to add xorg-xhost for the above stuff or look for options
 
     # messengers
     pkgs.signal-desktop
