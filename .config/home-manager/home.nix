@@ -75,6 +75,8 @@
     pkgs.obs-studio # TODO failed to initialise
     pkgs.qbittorrent
     pkgs.qutebrowser # TODO fix, EGL not available
+    pkgs.rofi-wayland
+    pkgs.shortwave
     # pkgs.kdePackages.kdeconnect-kde # TODO figure out how to set this
     # pkgs.kitty # TODO figure out how to set this and see if this needs to be set somewhere else
     # pkgs.gsmartcontrol # facing some issues with polkit agent, need to fix
