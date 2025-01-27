@@ -2,6 +2,8 @@
 
 # TODO figure out how to theme gtk and qt applications - use catpuccin (refer to repo if needed)
 # TODO lookup nixos wiki on bluetooth
+# TODO flatpak support and flatseal
+# TODO scanning, printing, firewall
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -28,6 +30,7 @@
     pkgs.jq
     pkgs.fd
     pkgs.ripgrep
+    pkgs.newsraft
 
     # command line applications
     pkgs.yazi
@@ -55,6 +58,13 @@
     pkgs.protonvpn-gui
     pkgs.copyq
     pkgs.lxqt.lxqt-archiver
+    pkgs.grim
+    pkgs.flameshot
+    pkgs.gimp
+    pkgs.kdePackages.kdenlive # TODO fix opengl thing
+    pkgs.libreoffice-qt-fresh
+    pkgs.kdiskmark
+    pkgs.zathura
     # pkgs.kdePackages.kdeconnect-kde # TODO figure out how to set this
     # pkgs.kitty # TODO figure out how to set this and see if this needs to be set somewhere else
     # pkgs.gsmartcontrol # facing some issues with polkit agent, need to fix
@@ -68,7 +78,7 @@
     pkgs.slack
 
     # music
-    pkgs.spotube
+    pkgs.spotube # TODO opengl stuff
     # pkgs.kdePackages.audiotube # not working
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
