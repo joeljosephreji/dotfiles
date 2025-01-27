@@ -6,6 +6,8 @@
 # TODO scanning, printing, firewall
 # TODO mpd - music player daemon
 # TODO minecraft
+# TODO nvidia stuff
+# TODO rog stuff - batteries, etc
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -77,6 +79,7 @@
     pkgs.qutebrowser # TODO fix, EGL not available
     pkgs.rofi-wayland
     pkgs.shortwave
+    pkgs.tenacity # TODO maybe some ffmpeg issue?
     # pkgs.kdePackages.kdeconnect-kde # TODO figure out how to set this
     # pkgs.kitty # TODO figure out how to set this and see if this needs to be set somewhere else
     # pkgs.gsmartcontrol # facing some issues with polkit agent, need to fix
