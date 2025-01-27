@@ -8,6 +8,7 @@
 # TODO minecraft
 # TODO nvidia stuff
 # TODO rog stuff - batteries, etc
+# TODO install hypr stuff - cursor, graphics, idle, land, lang, lock, paper, polkitagent, utils, scanner, portal
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
