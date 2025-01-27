@@ -5,6 +5,7 @@
 # TODO flatpak support and flatseal
 # TODO scanning, printing, firewall
 # TODO mpd - music player daemon
+# TODO minecraft
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -69,6 +70,9 @@
     pkgs.zathura
     pkgs.mousam
     pkgs.mpv
+    pkgs.vlc
+    pkgs.localsend # TODO fix opengly thing
+    pkgs.obs-studio # TODO failed to initialise
     # pkgs.kdePackages.kdeconnect-kde # TODO figure out how to set this
     # pkgs.kitty # TODO figure out how to set this and see if this needs to be set somewhere else
     # pkgs.gsmartcontrol # facing some issues with polkit agent, need to fix
