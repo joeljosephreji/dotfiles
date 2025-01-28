@@ -81,6 +81,7 @@
     pkgs.rofi-wayland
     pkgs.shortwave
     pkgs.tenacity # TODO maybe some ffmpeg issue?
+    pkgs.wezterm # TODO issue with wayland / EGL?
     # pkgs.kdePackages.kdeconnect-kde # TODO figure out how to set this
     # pkgs.kitty # TODO figure out how to set this and see if this needs to be set somewhere else
     # pkgs.gsmartcontrol # facing some issues with polkit agent, need to fix
