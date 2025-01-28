@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
 
-# TODO figure out how to theme gtk and qt applications - use catpuccin (refer to repo if needed)
-# TODO lookup nixos wiki on bluetooth
+# TODO figure out firefox
+# TODO figure out how to theme gtk (nwlook) and qt applications - use catpuccin (refer to repo if needed)
+# TODO lookup nixos wiki on bluetooth (blueman)
 # TODO flatpak support and flatseal
 # TODO scanning, printing, firewall
 # TODO mpd - music player daemon
@@ -9,6 +10,14 @@
 # TODO nvidia stuff
 # TODO rog stuff - batteries, etc
 # TODO install hypr stuff - cursor, graphics, idle, land, lang, lock, paper, polkitagent, utils, scanner, portal
+# TODO is xvideo wayland bridge required?
+# TODO pavucontrol
+# TODO hwinfo/lstopo
+# TODO meld
+# TODO networkmanager ?
+# TODO geo handler for gammastep
+# TODO xwayland ?
+# TODO librewolf ungoogled-chromium ?
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
