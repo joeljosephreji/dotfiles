@@ -12,7 +12,7 @@
         "group/hyprland-core"
     ],
     "modules-center": [
-        "custom/media",
+        "mpris",
         "group/time-date-weather",
         "mpd"
     ],
@@ -51,16 +51,18 @@
         "max-length": 200,
         "separate-outputs": true
     },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "player-icons": {
+            "mpv": "🎵",
             "spotify": "",
-            "default": "🎜"
+            "default": ""
         },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in same directory
+        "status-icons": {
+            "paused": ""
+        },
+        "title-len" : 15
     },
     "group/time-date-weather": {
         "orientation": "inherit",

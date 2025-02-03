@@ -7,7 +7,7 @@
 
 #submap,
 #window,
-#custom-media,
+#mpris,
 #clock,
 #custom-weather,
 #mpd,
@@ -29,7 +29,7 @@
 }
 
 #hyprland-core,
-#custom-media,
+#mpris,
 #time-date-weather,
 #mpd,
 #major-info-bar,
@@ -84,16 +84,16 @@ window#waybar.empty #window {
     color: @red;
 }
 
-#custom-media {
+#mpris {
     color: @green;
     min-width: 100px;
 }
 
-#custom-media.custom-spotify {
+#mpris.spotify {
     color: @green;
 }
 
-#custom-media.custom-vlc {
+#mpris.vlc {
     color: @yellow;
 }
 
