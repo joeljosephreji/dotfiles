@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/usr/bin/env sh
 
 COUNT=$(dunstctl count waiting)
 ENABLED=
