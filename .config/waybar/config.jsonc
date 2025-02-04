@@ -62,7 +62,8 @@
         "status-icons": {
             "paused": ""
         },
-        "title-len" : 20
+        "title-len" : 25
+        "artist-len" : 10
     },
     "group/time-date-weather": {
         "orientation": "inherit",
