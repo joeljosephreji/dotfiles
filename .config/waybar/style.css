@@ -10,7 +10,6 @@
 #mpris,
 #clock,
 #custom-weather,
-#mpd,
 #custom-dunst,
 #idle_inhibitor,
 #pulseaudio,
@@ -31,7 +30,6 @@
 #hyprland-core,
 #mpris,
 #time-date-weather,
-#mpd,
 #major-info-bar,
 #tray {
   background-color: alpha(@surface0, 0.8);
@@ -103,22 +101,6 @@ window#waybar.empty #window {
 
 #custom-weather {
     color: @pink;
-}
-
-#mpd {
-    color: @green;
-}
-
-#mpd.disconnected {
-    color: @red;
-}
-
-#mpd.stopped {
-    color: @sapphire;
-}
-
-#mpd.paused {
-    color: @teal;
 }
 
 #custom-dunst {
