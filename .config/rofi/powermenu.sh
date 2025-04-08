@@ -24,7 +24,7 @@ case $selected in
         ;;
     "$logout")
         # notify-send "Logging out!"
-        hyprctl dispatch exit
+        uwsm stop # more graceful than exit dispatcher from hyrpctl, it seems
         ;;
     "$reboot")
         # notify-send "Rebooting!"
