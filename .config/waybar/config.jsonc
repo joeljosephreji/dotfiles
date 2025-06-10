@@ -91,8 +91,8 @@
             "privacy", // First element is the "group leader" and won't ever be hidden
             "custom/dunst",
             "idle_inhibitor",
-            "pulseaudio",
             "power-profiles-daemon",
+            "pulseaudio",
             "group/major-stats",
             "backlight",
             "battery"
