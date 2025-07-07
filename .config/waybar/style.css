@@ -2,7 +2,7 @@
 
 * {
     font-family: Fira Code, Font Awesome;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 #submap,
@@ -14,7 +14,6 @@
 #idle_inhibitor,
 #pulseaudio,
 #power-profiles-daemon,
-#keyboard-state,
 #cpu,
 #memory,
 #disk,
@@ -24,17 +23,18 @@
 /* #bat2, */
 #privacy,
 #tray {
-  padding: 10px 10px 10px 10px;
+    padding: 3px 7px;
 }
 
 #hyprland-core,
 #mpris,
 #time-date-weather,
 #major-info-bar,
+#workspaces,
 #tray {
-  background-color: alpha(@surface0, 0.8);
-  margin: 7px 3px 0px 3px;
-  border-radius: 1rem;
+    background-color: alpha(@surface0, 0.8);
+    margin: 5px 2px 0px 2px;
+    border-radius: 0.75rem;
 }
 
 window#waybar {
@@ -45,20 +45,10 @@ window#waybar.empty #window {
     background-color: transparent;
 }
 
-#workspaces {
-  border-radius: 1rem;
-  background-color: @surface0;
-  margin-top: 1rem;
-  margin: 7px 3px 0px 3px;
-  padding-left: 3px;
-  padding-right: 3px;
-}
-
 #workspaces button {
     color: @lavender;
-    border-radius: 1rem;
-    padding-left: 6px;
-    margin: 5px 0;
+    border-radius: 0.75rem;
+    padding: 0px 7px 0px 3px;
     box-shadow: inset 0 -3px transparent;
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
     background-color: transparent;
@@ -66,12 +56,12 @@ window#waybar.empty #window {
 
 #workspaces button:hover {
     color: @pink;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
 }
 
 #workspaces button.active {
     color: @mauve;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
 }
 
 #workspaces button.urgent {
@@ -84,7 +74,6 @@ window#waybar.empty #window {
 
 #mpris {
     color: @green;
-    min-width: 100px;
 }
 
 #mpris.spotify {
@@ -135,21 +124,6 @@ window#waybar.empty #window {
     color: @green;
 }
 
-#keyboard-state {
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-    color: @mauve;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    color: @green;
-}
-
 #cpu {
     color: @rosewater;
 }
@@ -187,13 +161,13 @@ window#waybar.empty #window {
 }
 
 @keyframes blink {
-    to {
-        color: @red;
-    }
+to {
+    color: @red;
+}
 }
 
 #battery.warning:not(.charging) {
-  color: @yellow;
+    color: @yellow;
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
@@ -223,7 +197,7 @@ label:focus {
 }
 
 #tray {
-  border-radius: 1rem;
+    border-radius: 0.75rem;
 }
 
 #tray > .passive {

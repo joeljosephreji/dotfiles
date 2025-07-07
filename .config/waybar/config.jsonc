@@ -145,22 +145,13 @@
         "orientation": "inherit",
         "drawer": {},
         "modules": [
-            "keyboard-state", // First element is the "group leader" and won't ever be hidden
+            // First element is the "group leader" and won't ever be hidden
             "cpu",
             "memory",
             "disk",
             "disk#home",
             "temperature"
         ]
-    },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{icon} {name}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
     },
     "cpu": {
         "format": " {usage}%",
