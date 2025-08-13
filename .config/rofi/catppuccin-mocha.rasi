@@ -9,7 +9,7 @@
     grey: #6c7086;
 
     width: 600;
-    font: "IBM Plex Mono 12";
+    font: "BlexMono Nerd Font 12";
 }
 
 element-text, element-icon , mode-switcher {
